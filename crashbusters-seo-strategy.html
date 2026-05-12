@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CrashBusters — Повна SEO & Контент-Стратегія 2025 Q3</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,600;1,300&display=swap');
+
+  :root {
+    --black: #0a0a0a;
+    --white: #f5f0eb;
+    --orange: #ff5c1a;
+    --orange-dim: #c43d08;
+    --yellow: #f5c842;
+    --gray: #2a2a2a;
+    --gray-mid: #444;
+    --gray-light: #888;
+    --red: #e63333;
+    --green: #2ecc71;
+    --blue: #3498db;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  /* HEADER */
+  .doc-header {
+    background: var(--orange);
+    padding: 60px 48px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  .doc-header::before {
+    content: 'SEO';
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 320px;
+    position: absolute;
+    right: -20px;
+    top: -60px;
+    color: rgba(0,0,0,0.12);
+    line-height: 1;
+    pointer-events: none;
+  }
+  .doc-header .label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(0,0,0,0.6);
+    margin-bottom: 12px;
+  }
+  .doc-header h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 72px;
+    color: var(--black);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .doc-header .subtitle {
+    font-size: 18px;
+    color: rgba(0,0,0,0.7);
+    font-weight: 300;
+  }
+  .doc-header .meta {
+    margin-top: 32px;
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+  .doc-header .meta-item {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: rgba(0,0,0,0.65);
+  }
+  .doc-header .meta-item strong {
+    display: block;
+    color: var(--black);
+    font-size: 14px;
+  }
+
+  /* CRITICAL ALERT */
+  .critical-alert {
+    background: var(--red);
+    padding: 20px 48px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .critical-alert .icon { font-size: 28px; }
+  .critical-alert .text { font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 600; }
+  .critical-alert .text span { font-size: 11px; font-weight: 400; display: block; margin-top: 2px; opacity: 0.85; }
+
+  /* NAV */
+  .toc {
+    background: var(--gray);
+    padding: 32px 48px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 8px;
+  }
+  .toc a {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--gray-light);
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color .2s;
+  }
+  .toc a:hover { color: var(--orange); }
+  .toc a::before { content: '→ '; color: var(--orange); }
+
+  /* MAIN LAYOUT */
+  .main { max-width: 1100px; margin: 0 auto; padding: 0 48px 80px; }
+
+  /* SECTION */
+  .section {
+    margin-top: 72px;
+    padding-top: 32px;
+    border-top: 1px solid var(--gray);
+  }
+  .section-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 8px;
+  }
+  .section h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 48px;
+    line-height: 1;
+    margin-bottom: 32px;
+    color: var(--white);
+  }
+
+  /* SUBSECTION */
+  h3 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 36px 0 12px;
+    color: var(--yellow);
+  }
+  h4 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    color: var(--orange);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 24px 0 8px;
+  }
+
+  p { margin-bottom: 12px; color: rgba(245,240,235,0.85); }
+
+  /* CARDS */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+  }
+  .card {
+    background: var(--gray);
+    border-left: 3px solid var(--orange);
+    padding: 20px 24px;
+    border-radius: 2px;
+  }
+  .card.green { border-color: var(--green); }
+  .card.red { border-color: var(--red); }
+  .card.blue { border-color: var(--blue); }
+  .card.yellow { border-color: var(--yellow); }
+  .card h5 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: var(--gray-light);
+  }
+  .card p { font-size: 14px; margin-bottom: 0; }
+
+  /* ALERT BOX */
+  .alert {
+    padding: 16px 20px;
+    border-radius: 2px;
+    margin: 16px 0;
+    font-size: 14px;
+  }
+  .alert.danger { background: rgba(230,51,51,0.15); border-left: 4px solid var(--red); color: #ff9999; }
+  .alert.warning { background: rgba(245,200,66,0.12); border-left: 4px solid var(--yellow); color: var(--yellow); }
+  .alert.info { background: rgba(52,152,219,0.12); border-left: 4px solid var(--blue); color: #aad4f5; }
+  .alert.success { background: rgba(46,204,113,0.12); border-left: 4px solid var(--green); color: #a8efc7; }
+  .alert strong { display: block; margin-bottom: 4px; font-size: 13px; letter-spacing: 0.5px; }
+
+  /* TABLE */
+  .table-wrap { overflow-x: auto; margin: 16px 0; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th {
+    background: var(--gray);
+    color: var(--orange);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 10px 14px;
+    text-align: left;
+    border-bottom: 1px solid #333;
+  }
+  td {
+    padding: 10px 14px;
+    border-bottom: 1px solid #1e1e1e;
+    color: rgba(245,240,235,0.8);
+    vertical-align: top;
+  }
+  tr:hover td { background: rgba(255,255,255,0.03); }
+
+  /* KEYWORD CHIP */
+  .chip {
+    display: inline-block;
+    background: var(--gray);
+    border: 1px solid #333;
+    color: var(--orange);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 2px;
+    margin: 3px 3px 3px 0;
+  }
+  .chip.green { color: var(--green); border-color: rgba(46,204,113,0.3); }
+  .chip.yellow { color: var(--yellow); border-color: rgba(245,200,66,0.3); }
+  .chip.red { color: #ff9999; border-color: rgba(230,51,51,0.3); }
+
+  /* PRIORITY */
+  .priority {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 2px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .p1 { background: var(--red); color: white; }
+  .p2 { background: var(--yellow); color: var(--black); }
+  .p3 { background: var(--gray-mid); color: var(--white); }
+
+  /* TIMELINE */
+  .timeline { margin-top: 24px; }
+  .timeline-item {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+    position: relative;
+  }
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 159px;
+    top: 0;
+    bottom: -24px;
+    width: 1px;
+    background: var(--gray);
+  }
+  .timeline-item:last-child::before { display: none; }
+  .timeline-date {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    color: var(--orange);
+    line-height: 1.1;
+    text-align: right;
+    padding-right: 24px;
+  }
+  .timeline-date span {
+    display: block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    font-weight: 400;
+    color: var(--gray-light);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .timeline-content {
+    padding-top: 4px;
+    padding-left: 24px;
+    border-left: 2px solid var(--orange);
+  }
+  .timeline-content ul { list-style: none; padding: 0; }
+  .timeline-content ul li {
+    font-size: 14px;
+    padding: 4px 0;
+    color: rgba(245,240,235,0.8);
+  }
+  .timeline-content ul li::before { content: '▸ '; color: var(--orange); }
+
+  /* CONTENT BRIEF */
+  .brief {
+    background: var(--gray);
+    border: 1px solid #333;
+    padding: 32px;
+    border-radius: 2px;
+    margin-top: 16px;
+  }
+  .brief-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .brief-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 32px;
+    color: var(--orange);
+    line-height: 1;
+  }
+  .brief-meta {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--gray-light);
+    text-align: right;
+    line-height: 1.8;
+  }
+  .brief-section { margin-bottom: 20px; }
+  .brief-section label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gray-light);
+    display: block;
+    margin-bottom: 6px;
+  }
+  .brief-section p, .brief-section li {
+    font-size: 14px;
+    color: rgba(245,240,235,0.85);
+  }
+  .brief-section ul { list-style: none; padding-left: 0; }
+  .brief-section ul li::before { content: '→ '; color: var(--orange); }
+
+  /* SCORE BAR */
+  .score-row { margin: 8px 0; }
+  .score-label {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    margin-bottom: 4px;
+  }
+  .score-bar {
+    height: 6px;
+    background: #222;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .score-fill {
+    height: 100%;
+    border-radius: 3px;
+    background: var(--orange);
+    transition: width 1s;
+  }
+  .score-fill.green { background: var(--green); }
+  .score-fill.yellow { background: var(--yellow); }
+  .score-fill.red { background: var(--red); }
+
+  /* COMPETITOR CARD */
+  .comp-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; margin-top: 16px; }
+  .comp-card { background: var(--gray); padding: 20px; border-radius: 2px; border-top: 3px solid var(--gray-mid); }
+  .comp-card.us { border-color: var(--orange); }
+  .comp-card h5 { font-family: 'Bebas Neue', sans-serif; font-size: 22px; margin-bottom: 8px; color: var(--white); }
+  .comp-card .tag { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--gray-light); text-transform: uppercase; letter-spacing: 1px; }
+
+  .divider { height: 1px; background: var(--gray); margin: 24px 0; }
+
+  /* FOOTER */
+  .doc-footer {
+    background: var(--orange);
+    padding: 32px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .doc-footer .brand { font-family: 'Bebas Neue', sans-serif; font-size: 32px; color: var(--black); }
+  .doc-footer .note { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: rgba(0,0,0,0.6); }
+
+  @media (max-width: 768px) {
+    .doc-header { padding: 40px 24px 32px; }
+    .doc-header h1 { font-size: 48px; }
+    .main { padding: 0 24px 60px; }
+    .toc { padding: 24px; }
+    .timeline-item { grid-template-columns: 1fr; }
+    .timeline-item::before { display: none; }
+    .timeline-date { text-align: left; }
+    .timeline-content { border-left: 2px solid var(--orange); }
+    .doc-footer { padding: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="doc-header">
+  <div class="label">Повний SEO та Контент-Аудит · Травень 2026</div>
+  <h1>CrashBusters</h1>
+  <div class="subtitle">Стратегія зростання для демонтажного бізнесу у Варшаві — 90 днів до результату</div>
+  <div class="meta">
+    <div class="meta-item"><strong>crashbusters.pl</strong>Основний сайт</div>
+    <div class="meta-item"><strong>Варшава, Польща</strong>Географія</div>
+    <div class="meta-item"><strong>Демонтаж / Ремонт</strong>Ніша</div>
+    <div class="meta-item"><strong>PL / UA / RU</strong>Мови аудиторії</div>
+  </div>
+</div>
+
+<!-- CRITICAL ALERT -->
+<div class="critical-alert">
+  <div class="icon">🚨</div>
+  <div class="text">
+    КРИТИЧНО: Знайдено 3 фатальні помилки на сайті — потребують виправлення СЬОГОДНІ
+    <span>Фейкові відгуки з США · Ціни на послуги прибирання (не демонтажу) · Англомовний дубль секції послуг від шаблону</span>
+  </div>
+</div>
+
+<!-- TABLE OF CONTENTS -->
+<div class="toc">
+  <a href="#section1">1. Аналіз сайту</a>
+  <a href="#section2">2. SEO-аудит</a>
+  <a href="#section3">3. Контент-стратегія</a>
+  <a href="#section4">4. Стратегія просування</a>
+  <a href="#section5">5. Конкуренти</a>
+  <a href="#section6">6. Готові матеріали</a>
+  <a href="#section7">7. Action Plan</a>
+</div>
+
+<div class="main">
+
+<!-- ===== SECTION 1 ===== -->
+<div class="section" id="section1">
+  <div class="section-label">Section 01</div>
+  <h2>Аналіз сайту та сторінок</h2>
+
+  <h3>✅ Що добре</h3>
+  <div class="card-grid">
+    <div class="card green">
+      <h5>Title + H1</h5>
+      <p>Title містить ключові слова та локацію. H1 «Profesjonalne prace rozbiórkowe Warszawa i okolice» — чіткий, локалізований.</p>
+    </div>
+    <div class="card green">
+      <h5>Активний блог</h5>
+      <p>55 сторінок статей польською — великий потенціал для SEO-трафіку. Регулярні публікації з квітня 2026.</p>
+    </div>
+    <div class="card green">
+      <h5>Структура послуг</h5>
+      <p>5 окремих підсторінок послуг з власними URL. Це правильно для SEO — кожна послуга може ранжуватися окремо.</p>
+    </div>
+    <div class="card green">
+      <h5>Форма заявки</h5>
+      <p>Є форма із вибором послуг, датою та локацією. CTA дублюється — і вгорі, і внизу сторінки.</p>
+    </div>
+    <div class="card green">
+      <h5>FAQ з ключовими словами</h5>
+      <p>FAQ містить природні ключові слова: «wyburzanie ścian», «skuwanie płytek», «wywóz gruzu» — правильно для Featured Snippets.</p>
+    </div>
+    <div class="card green">
+      <h5>Телефон на сайті</h5>
+      <p>Номер 694 608 695 присутній у кількох місцях. Footer, CTA-блок, контакт-сторінка — важливо для локального SEO.</p>
+    </div>
+  </div>
+
+  <h3>❌ Що критично погано</h3>
+
+  <div class="alert danger">
+    <strong>🔴 БАГ #1 — ФЕЙКОВІ ВІДГУКИ (критичний удар по довірі)</strong>
+    На головній сторінці є відгуки: «Jane Doe, Jersey City, NJ» та «John Smith, New York, NY» — це шаблонні заготовки з американської cleaning-сервісної теми. Польські клієнти бачать американців, що рекомендують польську будівельну компанію. Це вбиває довіру миттєво. Прибрати і замінити реальними відгуками від клієнтів.
+  </div>
+
+  <div class="alert danger">
+    <strong>🔴 БАГ #2 — ЦІНИ НА ПОСЛУГИ ПРИБИРАННЯ (не демонтажу!)</strong>
+    На сторінці /uslugi є секція «Our pricing» з пакетами: «Basic cleaning package $19/visit», «Standard cleaning $59», «Deep cleaning $119». Це залишки шаблону від cleaning-сервісу. Відвідувач бачить долари та прибирання замість демонтажу. Прибрати НЕГАЙНО або замінити реальними пакетами.
+  </div>
+
+  <div class="alert danger">
+    <strong>🔴 БАГ #3 — ДУБЛІКАТ СЕКЦІЇ «Our services» АНГЛІЙСЬКОЮ</strong>
+    На головній сторінці є дві секції послуг: польська та прихована англійська з «cleaning service» контентом. Одна з них — від шаблону і не видалена. Це також плутає Google при індексації.
+  </div>
+
+  <div class="alert warning">
+    <strong>🟡 Посилання /service-static та /old-home</strong>
+    Деякі посилання в footer та картках послуг ведуть на /service-static і /old-home — це явно технічний сміття від розробки. Перевірити та виправити.
+  </div>
+
+  <div class="alert warning">
+    <strong>🟡 Сломана ієрархія заголовків у FAQ</strong>
+    FAQ використовує H3 → H4 → H5 → H6 → H6 без логіки. Google бачить ієрархію як хаос. Стандартизувати до H3 для всіх питань.
+  </div>
+
+  <h3>📊 Оцінка сторінок</h3>
+  <div class="score-row"><div class="score-label"><span>Головна сторінка</span><span>55/100</span></div><div class="score-bar"><div class="score-fill yellow" style="width:55%"></div></div></div>
+  <div class="score-row"><div class="score-label"><span>/uslugi</span><span>40/100</span></div><div class="score-bar"><div class="score-fill red" style="width:40%"></div></div></div>
+  <div class="score-row"><div class="score-label"><span>/uslugi/wyburzenia-i-demontaze</span><span>60/100</span></div><div class="score-bar"><div class="score-fill yellow" style="width:60%"></div></div></div>
+  <div class="score-row"><div class="score-label"><span>/blog</span><span>72/100</span></div><div class="score-bar"><div class="score-fill green" style="width:72%"></div></div></div>
+  <div class="score-row"><div class="score-label"><span>/kontakt</span><span>50/100</span></div><div class="score-bar"><div class="score-fill yellow" style="width:50%"></div></div></div>
+
+  <h3>🎯 Сторінки з найбільшим потенціалом</h3>
+  <div class="card-grid">
+    <div class="card yellow">
+      <h5>Блог (55 статей)</h5>
+      <p>Вже є контент — потрібна оптимізація title/meta/internal linking. Може принести 60% органічного трафіку.</p>
+    </div>
+    <div class="card yellow">
+      <h5>/uslugi/wyburzenia-i-demontaze</h5>
+      <p>Головна комерційна сторінка. Після виправлення багів та додавання контенту — найбільша конверсія.</p>
+    </div>
+    <div class="card yellow">
+      <h5>Нові landing pages</h5>
+      <p>Потрібні сторінки для «skuwanie płytek Warszawa», «wywóz gruzu», «wyburzenie ściany cena» — зараз їх немає.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SECTION 2 ===== -->
+<div class="section" id="section2">
+  <div class="section-label">Section 02</div>
+  <h2>SEO-аудит</h2>
+
+  <h3>Мета-теги та Title</h3>
+  <div class="table-wrap">
+    <table>
+      <tr><th>Сторінка</th><th>Title</th><th>Meta Description</th><th>Оцінка</th></tr>
+      <tr><td>Головна</td><td>Crashbusters – Wyburzenia, rozbiórki i skuwanie | Warszawa i okolice</td><td>«Szukasz ekipy do rozbiórki?» — коротка, є CTA</td><td><span class="priority p2">ДОБРЕ</span></td></tr>
+      <tr><td>/uslugi</td><td>Crashbusters: Profesjonalne wyburzenia i skuwanie | Usługi rozbiórkowe</td><td>«bez stresu» — слабка, не містить локацію</td><td><span class="priority p2">СЕРЕДНЬО</span></td></tr>
+      <tr><td>/blog</td><td>Blog Crashbusters | Porady remontowe, rozbiórkowe i budowlane</td><td>Є, нормальна</td><td><span class="priority p2">ДОБРЕ</span></td></tr>
+      <tr><td>Кожна стаття</td><td>Залежить від статті — перевірити окремо</td><td>Потребує перевірки через Search Console</td><td><span class="priority p3">ПЕРЕВІРИТИ</span></td></tr>
+    </table>
+  </div>
+
+  <h3>Ключові слова — аналіз покриття</h3>
+  <h4>Високий пріоритет (комерційний намір)</h4>
+  <span class="chip">wyburzenie ściany Warszawa</span>
+  <span class="chip">skuwanie płytek Warszawa</span>
+  <span class="chip">wyburzenia i rozbiórki Warszawa</span>
+  <span class="chip">demontaż ścian cena</span>
+  <span class="chip">wywóz gruzu Warszawa</span>
+  <span class="chip">firma rozbiórkowa Warszawa</span>
+  <span class="chip">usuwanie podłóg Warszawa</span>
+
+  <h4>Середній пріоритет (інформаційний намір → конверсія)</h4>
+  <span class="chip yellow">ile kosztuje wyburzenie ściany</span>
+  <span class="chip yellow">jak wyburzyć ścianę działową</span>
+  <span class="chip yellow">skuwanie tynków cena</span>
+  <span class="chip yellow">demontaż drzwi cena</span>
+  <span class="chip yellow">przygotowanie mieszkania do remontu</span>
+
+  <h4>Довгий хвіст (low competition, висока конверсія)</h4>
+  <span class="chip green">wyburzenie ściany działowej bez pozwolenia Warszawa</span>
+  <span class="chip green">skuwanie płytek Mokotów cena</span>
+  <span class="chip green">firma do rozbiórki wnętrz Warszawa opinie</span>
+  <span class="chip green">wyburzenia Praga Południe</span>
+
+  <h3>Внутрішнє перелінкування (Internal Linking)</h3>
+  <div class="alert warning">
+    <strong>Проблема:</strong> Блог (55 статей) практично не посилається на сторінки послуг. Це великий упущений шанс — кожна стаття про «skuwanie» повинна посилатися на /uslugi/skuwanie-powierzchni. Поточна ситуація: посилання з блогу → послуги = ~0%.
+  </div>
+  <div class="alert info">
+    <strong>Що зробити:</strong> Додати до кожної статті блогу 1-2 посилання на релевантну сторінку послуг. Це збільшить PageRank потоки на комерційні сторінки і покращить ранжування.
+  </div>
+
+  <h3>AI Visibility (Пошук через ChatGPT, Gemini, Perplexity)</h3>
+  <p>AI-пошуковики все більше відповідають на запити типу «яка фірма займається демонтажем у Варшаві». Для потрапляння в AI-відповіді потрібно:</p>
+  <div class="card-grid">
+    <div class="card blue">
+      <h5>E-E-A-T контент</h5>
+      <p>Публікувати статті з реальним досвідом: фото до/після, опис конкретних проектів, техніки роботи.</p>
+    </div>
+    <div class="card blue">
+      <h5>Structured Data</h5>
+      <p>Додати Schema.org: LocalBusiness, Service, FAQPage. Зараз на сайті нема жодного структурованого даних.</p>
+    </div>
+    <div class="card blue">
+      <h5>Цитованість</h5>
+      <p>Бути згаданим на Oferteo, OLX, Grudziądz, Złota Rączka, Solwers — AI тягне дані звідти.</p>
+    </div>
+    <div class="card blue">
+      <h5>Google Business Profile</h5>
+      <p>Повністю заповнений GBP з фото, відгуками, Q&A — це найважливіший AI-сигнал для локальних запитів.</p>
+    </div>
+  </div>
+
+  <h3>Технічне SEO — чек-ліст</h3>
+  <div class="table-wrap">
+    <table>
+      <tr><th>Параметр</th><th>Статус</th><th>Дія</th></tr>
+      <tr><td>HTTPS</td><td>✅ Є</td><td>—</td></tr>
+      <tr><td>Webflow платформа</td><td>⚠️ Обмежена гнучкість</td><td>Враховувати при змінах</td></tr>
+      <tr><td>Schema.org LocalBusiness</td><td>❌ Відсутнє</td><td>Додати через Webflow custom code</td></tr>
+      <tr><td>Schema.org FAQPage</td><td>❌ Відсутнє</td><td>Додати — дає Featured Snippets</td></tr>
+      <tr><td>Google Business Profile</td><td>⚠️ Є (потребує перевірки)</td><td>Оптимізувати повністю</td></tr>
+      <tr><td>Sitemap.xml</td><td>⚠️ Перевірити через Search Console</td><td>Переконатись що подана</td></tr>
+      <tr><td>Mobile-first</td><td>✅ Webflow адаптивний</td><td>Перевірити Core Web Vitals</td></tr>
+      <tr><td>Швидкість сайту</td><td>⚠️ Webflow з CDN — зазвичай ок</td><td>Оптимізувати зображення</td></tr>
+      <tr><td>Биті посилання (/old-home, /service-static)</td><td>❌ Є</td><td>Виправити / редиректи</td></tr>
+      <tr><td>Дублікат контент (шаблон)</td><td>❌ Критично</td><td>Видалити всі залишки шаблону</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- ===== SECTION 3 ===== -->
+<div class="section" id="section3">
+  <div class="section-label">Section 03</div>
+  <h2>Контент-стратегія на 3 місяці</h2>
+
+  <h3>Місяць 1 — Червень 2026: Фундамент</h3>
+  <div class="table-wrap">
+    <table>
+      <tr><th>Тема</th><th>Ключові слова</th><th>Намір</th><th>Формат</th><th>Пріоритет</th></tr>
+      <tr>
+        <td>Ile kosztuje wyburzenie ściany w 2026?</td>
+        <td>wyburzenie ściany cena, koszt demontażu ściany</td>
+        <td>Комерційний</td>
+        <td>Стаття + таблиця цін</td>
+        <td><span class="priority p1">HIGH</span></td>
+      </tr>
+      <tr>
+        <td>Jak wyburzyć ścianę działową — krok po kroku</td>
+        <td>wyburzenie ściany działowej, demontaż ściany</td>
+        <td>Інформаційний → конверсія</td>
+        <td>Стаття + CTA</td>
+        <td><span class="priority p1">HIGH</span></td>
+      </tr>
+      <tr>
+        <td>Skuwanie płytek — co warto wiedzieć przed remontem</td>
+        <td>skuwanie płytek cena, skuwanie płytek Warszawa</td>
+        <td>Інформаційний</td>
+        <td>Стаття + FAQ</td>
+        <td><span class="priority p1">HIGH</span></td>
+      </tr>
+      <tr>
+        <td>Landing: Wyburzenie ściany Warszawa</td>
+        <td>wyburzenie ściany Warszawa, firma do wyburzeń Warszawa</td>
+        <td>Транзакційний</td>
+        <td>LP з формою</td>
+        <td><span class="priority p1">HIGH</span></td>
+      </tr>
+      <tr>
+        <td>Landing: Skuwanie płytek Warszawa</td>
+        <td>skuwanie płytek Warszawa, skuwanie ceramiki</td>
+        <td>Транзакційний</td>
+        <td>LP з формою</td>
+        <td><span class="priority p1">HIGH</span></td>
+      </tr>
+    </table>
+  </div>
+
+  <h3>Місяць 2 — Липень 2026: Масштабування</h3>
+  <div class="table-wrap">
+    <table>
+      <tr><th>Тема</th><th>Ключові слова</th><th>Намір</th><th>Формат</th><th>Пріоритет</th></tr>
+      <tr>
+        <td>Wywóz gruzu Warszawa — ceny i co warto wiedzieć</td>
+        <td>wywóz gruzu Warszawa, utylizacja odpadów budowlanych</td>
+        <td>Комерційний</td>
+        <td>Стаття</td>
+        <td><span class="priority p1">HIGH</span></td>
+      </tr>
+      <tr>
+        <td>Remont łazienki krok po kroku — co zrobić najpierw</td>
+        <td>remont łazienki Warszawa, przygotowanie do remontu</td>
+        <td>Інформаційний</td>
+        <td>Гайд</td>
+        <td><span class="priority p2">MED</span></td>
+      </tr>
+      <tr>
+        <td>Czy potrzebne pozwolenie na wyburzenie ściany?</td>
+        <td>pozwolenie na wyburzenie ściany, wyburzenie bez pozwolenia</td>
+        <td>Інформаційний</td>
+        <td>Стаття + FAQ</td>
+        <td><span class="priority p2">MED</span></td>
+      </tr>
+      <tr>
+        <td>Demontaż podłogi — panele, parkiet, wykładzina</td>
+        <td>usuwanie podłogi, demontaż paneli cena</td>
+        <td>Інформаційний → конверсія</td>
+        <td>Стаття</td>
+        <td><span class="priority p2">MED</span></td>
+      </tr>
+      <tr>
+        <td>Instagram/Reels: Процес демонтажу «до і після»</td>
+        <td>—</td>
+        <td>Awareness</td>
+        <td>Відео 30-60 сек</td>
+        <td><span class="priority p1">HIGH</span></td>
+      </tr>
+      <tr>
+        <td>Допис FB: Наш реальний клієнт — кейс з Мокотова</td>
+        <td>—</td>
+        <td>Довіра</td>
+        <td>Пост + фото</td>
+        <td><span class="priority p2">MED</span></td>
+      </tr>
+    </table>
+  </div>
+
+  <h3>Місяць 3 — Серпень 2026: Авторитетність</h3>
+  <div class="table-wrap">
+    <table>
+      <tr><th>Тема</th><th>Ключові слова</th><th>Намір</th><th>Формат</th><th>Пріоритет</th></tr>
+      <tr>
+        <td>Najlepsze firmy wyburzeniowe Warszawa 2026</td>
+        <td>firmy wyburzeniowe Warszawa, firma rozbiórkowa opinie</td>
+        <td>Навігаційний (CrashBusters в списку)</td>
+        <td>Рейтинг-стаття</td>
+        <td><span class="priority p1">HIGH</span></td>
+      </tr>
+      <tr>
+        <td>Jak przygotować mieszkanie do generalnego remontu</td>
+        <td>przygotowanie do remontu, remont generalny Warszawa</td>
+        <td>Інформаційний</td>
+        <td>Чек-ліст стаття</td>
+        <td><span class="priority p2">MED</span></td>
+      </tr>
+      <tr>
+        <td>Безпека при демонтажних роботах (укр./рос. версія)</td>
+        <td>демонтаж Варшава, розбирання стін Варшава (RU/UA)</td>
+        <td>Awareness для UA/RU аудиторії</td>
+        <td>Стаття UA/RU</td>
+        <td><span class="priority p2">MED</span></td>
+      </tr>
+      <tr>
+        <td>Email newsletter: «Ремонт без стресу» — корисні поради</td>
+        <td>—</td>
+        <td>Retention</td>
+        <td>Email</td>
+        <td><span class="priority p3">LOW</span></td>
+      </tr>
+      <tr>
+        <td>TikTok: «Чи знаєш ти, що...» — цікаві факти про демонтаж</td>
+        <td>—</td>
+        <td>Awareness</td>
+        <td>TikTok 15-30 сек</td>
+        <td><span class="priority p2">MED</span></td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<!-- ===== SECTION 4 ===== -->
+<div class="section" id="section4">
+  <div class="section-label">Section 04</div>
+  <h2>Стратегія просування</h2>
+
+  <h3>SEO — Покроковий план</h3>
+  <div class="card-grid">
+    <div class="card">
+      <h5>Тиждень 1-2</h5>
+      <p>Виправити всі критичні баги сайту. Налаштувати Google Search Console + Analytics. Подати sitemap. Перевірити індексацію всіх 55 статей блогу.</p>
+    </div>
+    <div class="card">
+      <h5>Місяць 1</h5>
+      <p>Додати Schema.org (LocalBusiness + FAQPage). Оптимізувати title/meta всіх 5 сторінок послуг. Додати internal links з блогу → послуги.</p>
+    </div>
+    <div class="card">
+      <h5>Місяць 2-3</h5>
+      <p>Публікувати 4-6 статей на місяць. Створити 3-5 нових landing pages (по районах Варшави). Отримати 10+ зовнішніх посилань.</p>
+    </div>
+  </div>
+
+  <h3>Локальне SEO — Пріоритет №1</h3>
+  <div class="alert success">
+    <strong>Google Business Profile — найшвидший шлях до заявок</strong>
+    Заповнити на 100%: опис з ключовими словами, всі категорії послуг, 20+ фото (до/після робіт), відповіді на всі відгуки, Q&A секція. Публікувати пости в GBP щотижня.
+  </div>
+  <div class="card-grid">
+    <div class="card">
+      <h5>Каталоги NAP</h5>
+      <p>Зареєструватися в: Oferteo, OLX, Fixly, Złota Rączka, Solwers, Panorama Firm, Yelp Poland. Однаковий NAP (Name/Address/Phone) скрізь.</p>
+    </div>
+    <div class="card">
+      <h5>Відгуки</h5>
+      <p>Після кожного проекту — SMS/повідомлення з проханням залишити відгук у Google. Ціль: 30+ відгуків за 90 днів. Відповідати на кожен відгук.</p>
+    </div>
+    <div class="card">
+      <h5>Районні landing pages</h5>
+      <p>Створити окремі сторінки: «Wyburzenia Mokotów», «Skuwanie Wola», «Demontaż Praga» — це дасть позиції по районах Варшави.</p>
+    </div>
+  </div>
+
+  <h3>Соцмережі — стратегія контенту</h3>
+  <div class="table-wrap">
+    <table>
+      <tr><th>Канал</th><th>Частота</th><th>Типи контенту</th><th>Аудиторія</th></tr>
+      <tr><td>Instagram</td><td>3-4 рази/тиж</td><td>Reels «до/після», Stories з процесом, каруселі-поради</td><td>Приватні клієнти, ремонтна аудиторія</td></tr>
+      <tr><td>Facebook</td><td>2-3 рази/тиж</td><td>Кейси, відгуки, посилання на статті, акції</td><td>Будівельні компанії, 35+ аудиторія</td></tr>
+      <tr><td>TikTok</td><td>2-3 рази/тиж</td><td>Процес демонтажу, лайфхаки, «знаєш чи ні»</td><td>Молода аудиторія, вірусний потенціал</td></tr>
+    </table>
+  </div>
+
+  <h3>Backlink стратегія</h3>
+  <div class="card-grid">
+    <div class="card">
+      <h5>Легкі посилання (тиждень 1)</h5>
+      <p>Oferteo, Fixly, Panorama Firm, Złota Rączka, OLX профіль — безкоштовно, швидко, якісно.</p>
+    </div>
+    <div class="card">
+      <h5>Партнерства</h5>
+      <p>Зв'язатися з 3-5 варшавськими фірмами з ремонту, дизайну інтер'єрів, архітекторами — взаємний обмін посиланнями.</p>
+    </div>
+    <div class="card">
+      <h5>Гостьові статті</h5>
+      <p>Написати 1-2 статті для польських будівельних блогів з посиланням на CrashBusters. Теми: «Jak wybrać firmę rozbiórkową».</p>
+    </div>
+    <div class="card">
+      <h5>Медіа-цитати</h5>
+      <p>Зареєструватися в HARO (польська версія) або реагувати на запити журналістів будівельної тематики.</p>
+    </div>
+  </div>
+
+  <h3>UA/RU аудиторія — окрема стратегія</h3>
+  <div class="alert info">
+    <strong>Потенціал: українська діаспора у Варшаві ~500,000+ осіб</strong>
+    Вони шукають послуги польською, але довіряють бізнесам, що комунікують рідною мовою. Варто: додати сторінку UA/RU на сайті, комунікувати в українських FB-групах Варшави, розміщувати рекламу у телеграм-каналах.
+  </div>
+</div>
+
+<!-- ===== SECTION 5 ===== -->
+<div class="section" id="section5">
+  <div class="section-label">Section 05</div>
+  <h2>Аналіз конкурентів</h2>
+
+  <div class="comp-grid">
+    <div class="comp-card us">
+      <div class="tag">НАШ КЛІЄНТ</div>
+      <h5>CrashBusters</h5>
+      <p style="font-size:13px; color:rgba(245,240,235,0.7);">Сильний: активний блог, чіткий брендинг, сучасний сайт на Webflow.<br>Слабкий: технічні баги, відсутність Schema, мало відгуків, нема районних LP.</p>
+    </div>
+    <div class="comp-card">
+      <div class="tag">Конкурент A</div>
+      <h5>WEG-BET</h5>
+      <p style="font-size:13px; color:rgba(245,240,235,0.7);">Діє з 2010. Ширший спектр (земляні роботи, дроблення бетону). Слабкий сайт, немає блогу. Є на Oferteo.</p>
+    </div>
+    <div class="comp-card">
+      <div class="tag">Конкурент B</div>
+      <h5>DAN MAX / Ostaszewski</h5>
+      <p style="font-size:13px; color:rgba(245,240,235,0.7);">Спеціалізується на Мазовецькому воєводстві. Є конкурентні ціни. Немає сайту з SEO. Вразливий на контент-стратегію.</p>
+    </div>
+    <div class="comp-card">
+      <div class="tag">Конкурент C</div>
+      <h5>Firmy z Oferteo (2488 оголошень)</h5>
+      <p style="font-size:13px; color:rgba(245,240,235,0.7);">Агрегатор — всі конкуренти там. CrashBusters мусить бути в топі Oferteo + мати власний SEO щоб не залежати від платформи.</p>
+    </div>
+    <div class="comp-card">
+      <div class="tag">Конкурент D</div>
+      <h5>Донбуд (Donbud)</h5>
+      <p style="font-size:13px; color:rgba(245,240,235,0.7);">Комплексні будівельні послуги включаючи демонтаж. Більший, але менш спеціалізований. CrashBusters може виграти позиціонуванням «тільки демонтаж».</p>
+    </div>
+    <div class="comp-card">
+      <div class="tag">Можливість</div>
+      <h5>Жоден не має UA/RU комунікації</h5>
+      <p style="font-size:13px; color:rgba(245,240,235,0.7);">Жоден виявлений конкурент не орієнтується на українську аудиторію у Варшаві. Це незайнята ніша з 500K+ потенційних клієнтів.</p>
+    </div>
+  </div>
+
+  <h3>Конкурентні переваги CrashBusters</h3>
+  <div class="card-grid">
+    <div class="card green">
+      <h5>Вузька спеціалізація</h5>
+      <p>«Тільки демонтаж» — сильніша позиція, ніж «все підряд». Клієнти більше довіряють спеціалістам.</p>
+    </div>
+    <div class="card green">
+      <h5>Сучасний сайт + блог</h5>
+      <p>Конкуренти мають слабкі або відсутні сайти. CrashBusters вже попереду технічно.</p>
+    </div>
+    <div class="card green">
+      <h5>Брендинг</h5>
+      <p>Запам'ятовувана назва CrashBusters — унікальна, відрізняється від «Firma Rozbiórkowa XYZ».</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SECTION 6 ===== -->
+<div class="section" id="section6">
+  <div class="section-label">Section 06</div>
+  <h2>Готові матеріали</h2>
+
+  <h3>10 тем для SEO-статей</h3>
+  <div class="table-wrap">
+    <table>
+      <tr><th>#</th><th>Тема статті</th><th>Головне ключове слово</th><th>Пріоритет</th></tr>
+      <tr><td>1</td><td>Ile kosztuje wyburzenie ściany w Warszawie w 2026?</td><td>wyburzenie ściany cena Warszawa</td><td><span class="priority p1">HIGH</span></td></tr>
+      <tr><td>2</td><td>Skuwanie płytek krok po kroku — co musisz wiedzieć</td><td>skuwanie płytek Warszawa</td><td><span class="priority p1">HIGH</span></td></tr>
+      <tr><td>3</td><td>Jak wyburzyć ścianę działową bez pozwolenia?</td><td>wyburzenie ściany działowej bez pozwolenia</td><td><span class="priority p1">HIGH</span></td></tr>
+      <tr><td>4</td><td>Wywóz gruzu Warszawa — poradnik i cennik 2026</td><td>wywóz gruzu Warszawa cena</td><td><span class="priority p1">HIGH</span></td></tr>
+      <tr><td>5</td><td>Przygotowanie mieszkania do remontu generalnego</td><td>przygotowanie do remontu Warszawa</td><td><span class="priority p2">MED</span></td></tr>
+      <tr><td>6</td><td>Najlepsze firmy wyburzeniowe Warszawa 2026 — ranking</td><td>firma wyburzeniowa Warszawa opinie</td><td><span class="priority p1">HIGH</span></td></tr>
+      <tr><td>7</td><td>Demontaż parkietu vs usuwanie paneli — różnice i ceny</td><td>usuwanie parkietu Warszawa</td><td><span class="priority p2">MED</span></td></tr>
+      <tr><td>8</td><td>Jak bezpiecznie skuć tynk — poradnik i zagrożenia</td><td>skuwanie tynków Warszawa</td><td><span class="priority p2">MED</span></td></tr>
+      <tr><td>9</td><td>Wyburzenia mieszkań pod wynajem — co warto wiedzieć</td><td>wyburzenia mieszkań Warszawa</td><td><span class="priority p2">MED</span></td></tr>
+      <tr><td>10</td><td>Rozbiórka ściany z cegły vs ściany z GK — porównanie</td><td>wyburzenie ściany z cegły</td><td><span class="priority p3">LOW</span></td></tr>
+    </table>
+  </div>
+
+  <h3>10 ідей для соцмереж</h3>
+  <div class="card-grid">
+    <div class="card">
+      <h5>Reels 1</h5>
+      <p>«10 секунд до» / «10 секунд після» — тайм-ліпс демонтажу кімнати. Мінімум коментарів, максимум видовища.</p>
+    </div>
+    <div class="card">
+      <h5>Reels 2</h5>
+      <p>«Чи знаєш ти, що можна виламати стіну без дозволу?» — пояснення за 30 сек, хук на перших секундах.</p>
+    </div>
+    <div class="card">
+      <h5>Карусель</h5>
+      <p>«5 помилок при самостійному демонтажі» — кожен слайд — 1 помилка. Слайд 5: «або виклич нас 😉».</p>
+    </div>
+    <div class="card">
+      <h5>Кейс</h5>
+      <p>Реальний клієнт: «Пані Катажина хотіла відкритий простір. Ми зробили це за 6 годин» — фото до/після + відгук.</p>
+    </div>
+    <div class="card">
+      <h5>Освітній пост</h5>
+      <p>«Що входить у ціну демонтажу?» — інфографіка з розбивкою: виїзд, робота, вивіз, прибирання.</p>
+    </div>
+    <div class="card">
+      <h5>B2B пост</h5>
+      <p>«Будівельним компаніям: берем демонтажні підряди» — прямо і чітко для підрядників. LinkedIn + FB.</p>
+    </div>
+    <div class="card">
+      <h5>За куліси</h5>
+      <p>«День нашої команди» — коротке відео з виїзду, знайомство з майстрами. Humanізує бренд.</p>
+    </div>
+    <div class="card">
+      <h5>TikTok тренд</h5>
+      <p>«ASMR demolition» — звук демонтажу під музику. Популярний формат на TikTok, 0 слів не потрібно.</p>
+    </div>
+    <div class="card">
+      <h5>Відгук-пост</h5>
+      <p>Скрін відгуку Google з коментарем команди — регулярно, раз на тиждень, будує соціальний доказ.</p>
+    </div>
+    <div class="card">
+      <h5>Акція</h5>
+      <p>«Замов до 30 червня — безкоштовний вивіз грузу» — сезонний оффер, обмежений час.</p>
+    </div>
+  </div>
+
+  <h3>5 ідей для Landing Pages</h3>
+  <div class="table-wrap">
+    <table>
+      <tr><th>URL</th><th>Фокус</th><th>Головне KW</th><th>Конверсія</th></tr>
+      <tr><td>/wyburzenie-sciany-warszawa</td><td>Виламування стін у Варшаві</td><td>wyburzenie ściany Warszawa</td><td>Форма + телефон</td></tr>
+      <tr><td>/skuwanie-plytek-warszawa</td><td>Скування плиток</td><td>skuwanie płytek Warszawa</td><td>Форма + ціни</td></tr>
+      <tr><td>/wywoz-gruzu-warszawa</td><td>Вивіз будівельного сміття</td><td>wywóz gruzu Warszawa</td><td>Калькулятор + форма</td></tr>
+      <tr><td>/uslugi/mokotow</td><td>Демонтаж на Мокотові</td><td>wyburzenia Mokotów</td><td>Локальна форма</td></tr>
+      <tr><td>/dla-firm</td><td>B2B — для будівельних компаній</td><td>podwykonawstwo demontaż Warszawa</td><td>Форма для бізнесу</td></tr>
+    </table>
+  </div>
+
+  <h3>5 заголовків для головної сторінки (варіанти A/B)</h3>
+  <div class="card-grid">
+    <div class="card yellow">
+      <h5>Варіант 1 — Поточний</h5>
+      <p>«Profesjonalne prace rozbiórkowe Warszawa i okolice» — чіткий, але нейтральний</p>
+    </div>
+    <div class="card yellow">
+      <h5>Варіант 2 — Результат</h5>
+      <p>«Wyburzamy, sprzątamy, znikamy. Przestrzeń gotowa w 24h.»</p>
+    </div>
+    <div class="card yellow">
+      <h5>Варіант 3 — Провокація</h5>
+      <p>«Masz ścianę do wyburzenia? My to lubimy.»</p>
+    </div>
+    <div class="card yellow">
+      <h5>Варіант 4 — B2B</h5>
+      <p>«Podwykonawstwo demontażu dla firm budowlanych — Warszawa i okolice»</p>
+    </div>
+    <div class="card yellow">
+      <h5>Варіант 5 — Унікальність</h5>
+      <p>«20+ specjalistów. 50+ zleceń. Jeden cel: czysta przestrzeń do remontu.»</p>
+    </div>
+  </div>
+
+  <h3>5 CTA (Call to Action)</h3>
+  <div class="card-grid">
+    <div class="card"><h5>CTA 1</h5><p>«Zamów bezpłatną wycenę w 24h»</p></div>
+    <div class="card"><h5>CTA 2</h5><p>«Zadzwoń teraz — wycena od ręki»</p></div>
+    <div class="card"><h5>CTA 3</h5><p>«Wyburz z nami — wolne terminy w czerwcu»</p></div>
+    <div class="card"><h5>CTA 4</h5><p>«Prześlij zdjęcie — wyceń zdalnie w 15 minut»</p></div>
+    <div class="card"><h5>CTA 5</h5><p>«Sprawdź dostępność ekipy na Twój termin»</p></div>
+  </div>
+
+  <h3>3 варіанти позиціонування бренду</h3>
+  <div class="card-grid">
+    <div class="card">
+      <h5>Позиціонування A — Швидкість</h5>
+      <p><strong>«Wyburzamy szybko, sprzątamy dokładnie.»</strong><br>Для приватних клієнтів, яким дорогий час. Акцент на швидкість виїзду, чистоту після роботи.</p>
+    </div>
+    <div class="card">
+      <h5>Позиціонування B — Спеціалізація</h5>
+      <p><strong>«Tylko rozbiórki. Tylko Warszawa. Tylko profesjonalnie.»</strong><br>Вузька спеціалізація = більше довіри. Для B2B ринку і тих, хто хоче спеціалістів, а не «всі послуги».</p>
+    </div>
+    <div class="card">
+      <h5>Позиціонування C — Партнерство</h5>
+      <p><strong>«Twój partner od demolki — od projektu do czystej przestrzeni.»</strong><br>Для будівельних фірм і дизайнерів. Акцент на надійного підрядника, а не разового виконавця.</p>
+    </div>
+  </div>
+
+  <h3>Детальний Content Brief — Пріоритетна стаття</h3>
+  <div class="brief">
+    <div class="brief-header">
+      <div class="brief-title">Content Brief #1</div>
+      <div class="brief-meta">
+        Пріоритет: КРИТИЧНИЙ<br>
+        Дедлайн: Тиждень 1<br>
+        Обсяг: 1500-2000 слів
+      </div>
+    </div>
+
+    <div class="brief-section">
+      <label>Тема статті</label>
+      <p>Ile kosztuje wyburzenie ściany w Warszawie w 2026? Cennik i co wpływa na cenę</p>
+    </div>
+
+    <div class="brief-section">
+      <label>Мета URL</label>
+      <p>/blog/ile-kosztuje-wyburzenie-sciany-warszawa-2026</p>
+    </div>
+
+    <div class="brief-section">
+      <label>Цільові ключові слова</label>
+      <p>
+        <span class="chip">wyburzenie ściany cena</span>
+        <span class="chip">ile kosztuje wyburzenie ściany Warszawa</span>
+        <span class="chip">demontaż ściany cena 2026</span>
+        <span class="chip">wyburzenie ściany działowej cennik</span>
+        <span class="chip">koszt wyburzenia ściany</span>
+      </p>
+    </div>
+
+    <div class="brief-section">
+      <label>Пошуковий намір</label>
+      <p>Комерційно-інформаційний. Людина планує ремонт і хоче знати ціну перед тим, як звернутися до фірми. Це «тепла» аудиторія близька до конверсії.</p>
+    </div>
+
+    <div class="brief-section">
+      <label>Структура статті (H-теги)</label>
+      <ul>
+        <li>H1: Ile kosztuje wyburzenie ściany w Warszawie w 2026?</li>
+        <li>H2: Cennik wyburzeń — orientacyjne ceny</li>
+        <li>H2: Od czego zależy cena wyburzenia ściany?</li>
+        <li>H3: Rodzaj ściany (działowa vs nośna)</li>
+        <li>H3: Metraż i grubość ściany</li>
+        <li>H3: Wywóz gruzu i sprzątanie</li>
+        <li>H2: Wyburzenie ściany działowej — ile kosztuje?</li>
+        <li>H2: Wyburzenie ściany nośnej — czy jest możliwe?</li>
+        <li>H2: Jak zamówić wycenę od Crashbusters?</li>
+        <li>H2: FAQ — najczęstsze pytania o cenę wyburzeń</li>
+      </ul>
+    </div>
+
+    <div class="brief-section">
+      <label>Таблиця цін (обов'язковий елемент)</label>
+      <p>Вставити таблицю з приблизними цінами: Ściana działowa GK 10m² = 300-500 zł, Ściana murowana cegła 10m² = 500-900 zł, Wywóz gruzu = 200-400 zł/kontener. Це головна причина, чому люди читають таку статтю.</p>
+    </div>
+
+    <div class="brief-section">
+      <label>CTA у статті</label>
+      <p>Після кожного H2 — м'який CTA: «Chcesz dokładną wycenę dla Twojego projektu? Wyślij zdjęcie lub zadzwoń: 694 608 695». В кінці — велика форма.</p>
+    </div>
+
+    <div class="brief-section">
+      <label>Internal links</label>
+      <ul>
+        <li>→ /uslugi/wyburzenia-i-demontaze (головна послуга)</li>
+        <li>→ /uslugi/wywoz-gruzu-i-odpadow-budowlanych</li>
+        <li>→ інша стаття блогу про дозволи на демонтаж</li>
+      </ul>
+    </div>
+
+    <div class="brief-section">
+      <label>Schema.org</label>
+      <p>Додати FAQPage Schema для секції FAQ — це дасть шанс на Featured Snippet у Google і AI-відповідях.</p>
+    </div>
+
+    <div class="brief-section">
+      <label>Очікуваний результат</label>
+      <p>Топ-10 Google за «ile kosztuje wyburzenie ściany Warszawa» через 2-4 місяці. Потенціал: 200-500 відвідувачів/місяць з цієї однієї статті. Конверсія в заявки: 2-5%.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SECTION 7 ===== -->
+<div class="section" id="section7">
+  <div class="section-label">Section 07</div>
+  <h2>Фінальний Action Plan</h2>
+
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <div class="timeline-date">
+        СЬОГОДНІ
+        <span>день 0</span>
+      </div>
+      <div class="timeline-content">
+        <ul>
+          <li>Видалити секцію «Our pricing» з клінінговими цінами ($19/$59/$119) зі сторінки /uslugi</li>
+          <li>Видалити або замінити фейкові відгуки (Jane Doe, John Smith) — замінити реальними від клієнтів або тимчасово прибрати секцію</li>
+          <li>Видалити англомовну дублікат-секцію послуг клінінгу з головної</li>
+          <li>Виправити посилання /old-home та /service-static — перенаправити на /uslugi</li>
+          <li>Зробити скріншоти поточного стану для порівняння «до/після»</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">
+        7 ДНІВ
+        <span>тиждень 1</span>
+      </div>
+      <div class="timeline-content">
+        <ul>
+          <li>Налаштувати Google Search Console (якщо ще не) і перевірити індексацію</li>
+          <li>Налаштувати Google Analytics 4 з ціле-подіями на форму заявки та телефон</li>
+          <li>Повністю заповнити Google Business Profile: опис, фото, категорії, Q&A</li>
+          <li>Зареєструватися на Oferteo, Fixly, Złota Rączka з єдиними NAP-даними</li>
+          <li>Написати та опублікувати статтю «Ile kosztuje wyburzenie ściany Warszawa 2026»</li>
+          <li>Додати Schema.org LocalBusiness через custom code Webflow</li>
+          <li>Стандартизувати H-теги у FAQ (всі → H3)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">
+        30 ДНІВ
+        <span>місяць 1</span>
+      </div>
+      <div class="timeline-content">
+        <ul>
+          <li>Опублікувати 4-5 SEO-статей з контент-плану (виконати пріоритет HIGH)</li>
+          <li>Додати internal links з усіх статей блогу на сторінки послуг (ревізія 55 статей)</li>
+          <li>Додати FAQPage Schema.org до всіх сторінок з FAQ</li>
+          <li>Запустити landing page «Wyburzenie ściany Warszawa» і «Skuwanie płytek Warszawa»</li>
+          <li>Розпочати збір відгуків Google — надіслати запит 10-15 минулим клієнтам</li>
+          <li>Налаштувати Instagram Reels-стратегію: 3 Reels на тиждень (до/після, процес, поради)</li>
+          <li>Зробити аудит meta title/description на всіх 5 сторінках послуг і оптимізувати</li>
+          <li>Зв'язатися з 3 варшавськими компаніями дизайну інтер'єрів щодо партнерства</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">
+        90 ДНІВ
+        <span>кінець кварталу</span>
+      </div>
+      <div class="timeline-content">
+        <ul>
+          <li>Опублікувати 12-15 SEO-статей загалом — покрити всі пріоритетні ключові слова</li>
+          <li>Запустити 3-5 районних landing pages (Mokotów, Wola, Praga, Ursynów, Żoliborz)</li>
+          <li>Досягти 20+ відгуків у Google Business Profile</li>
+          <li>Отримати 10+ якісних зовнішніх посилань (каталоги + партнерства)</li>
+          <li>Запустити окрему UA/RU-сторінку або секцію сайту для діаспори</li>
+          <li>Виміряти результати: позиції в Google, органічний трафік, кількість заявок з сайту</li>
+          <li>Перший звіт по конкурентному аналізу — хто обігнав, де ще є gap</li>
+          <li>Цільові метрики: +50% органічного трафіку, 30+ заявок на місяць з сайту</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</div><!-- /main -->
+
+<!-- FOOTER -->
+<div class="doc-footer">
+  <div class="brand">CrashBusters SEO Strategy 2026</div>
+  <div class="note">
+    Аналіз підготовлено на основі реального аудиту сайту crashbusters.pl<br>
+    Дані актуальні на травень 2026 · Оновити через 90 днів
+  </div>
+</div>
+
+</body>
+</html>
